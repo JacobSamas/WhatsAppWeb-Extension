@@ -5,6 +5,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 function displayContacts(contacts) {
-   
     console.log('Displaying contacts:', contacts);
 }

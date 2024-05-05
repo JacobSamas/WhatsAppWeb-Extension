@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filter button event listeners
     document.getElementById('filter-all').addEventListener('click', () => applyFilter('all'));
     document.getElementById('filter-unread').addEventListener('click', () => applyFilter('unread'));
-    document.getElementById('filter-awaiting').addEventListener('click', () => applyFilter('awaiting'));
-    document.getElementById('filter-needs-reply').addEventListener('click', () => applyFilter('needs-reply'));
+    document.getElementById('filter-awaiting').addEventListener('click', () -> applyFilter('awaiting'));
+    document.getElementById('filter-needs-reply').addEventListener('click', () -> applyFilter('needs-reply'));
 
     // Add custom filter
     document.getElementById('add-filter').addEventListener('click', addCustomFilter);
@@ -37,6 +37,7 @@ function loadCustomFilters() {
         customFilters.forEach(filter => {
             const button = document.createElement('button');
             button.textContent = filter;
+            button.className = 'filter-btn';
             button.addEventListener('click', () => applyFilter(filter));
             customFiltersList.appendChild(button);
         });
@@ -52,6 +53,6 @@ function loadContactDetails() {
 }
 
 function saveNotes() {
-    const notes = document.getElementById('contact-notes').value;
+    const notes = document.getElementbyId('contact-notes').value;
     chrome.runtime.sendMessage({ action: 'saveNotes', notes });
 }

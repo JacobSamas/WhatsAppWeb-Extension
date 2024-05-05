@@ -6,29 +6,34 @@
     <title>WhatsApp Filters</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <h1>WhatsApp Filters</h1>
-        <div class="filters">
-            <button id="filter-all">All</button>
-            <button id="filter-unread">Unread</button>
-            <button id="filter-awaiting">Awaiting Reply</button>
-            <button id="filter-needs-reply">Needs Reply</button>
+<body class="p-4">
+    <div class="container mx-auto max-w-sm">
+        <h1 class="text-2xl font-bold text-center mb-4">WhatsApp Filters</h1>
+
+        <div class="filters mb-4 flex flex-wrap justify-center">
+            <button id="filter-all" class="filter-btn">All</button>
+            <button id="filter-unread" class="filter-btn">Unread</button>
+            <button id="filter-awaiting" class="filter-btn">Awaiting Reply</button>
+            <button id="filter-needs-reply" class="filter-btn">Needs Reply</button>
         </div>
-        <div class="custom-filters">
-            <h2>Custom Filters</h2>
-            <div id="custom-filters-list">
+
+        <div class="custom-filters mb-4">
+            <h2 class="text-xl font-semibold mb-2">Custom Filters</h2>
+            <div id="custom-filters-list" class="flex flex-wrap gap-2 mb-2">
                 <!-- Custom filters will be listed here -->
             </div>
-            <input type="text" id="new-filter-name" placeholder="Filter name">
-            <button id="add-filter">Add Filter</button>
+            <div class="flex gap-2">
+                <input type="text" id="new-filter-name" class="w-full input-text" placeholder="Filter name">
+                <button id="add-filter" class="action-btn">Add</button>
+            </div>
         </div>
+
         <div class="contact-details">
-            <h2>Contact Details</h2>
-            <p id="contact-name">Name: <span></span></p>
-            <p id="contact-number">Number: <span></span></p>
-            <textarea id="contact-notes" placeholder="Notes..."></textarea>
-            <button id="save-notes">Save Notes</button>
+            <h2 class="text-xl font-semibold mb-2">Contact Details</h2>
+            <p id="contact-name">Name: <span class="font-semibold"></span></p>
+            <p id="contact-number">Number: <span class="font-semibold"></span></p>
+            <textarea id="contact-notes" class="w-full input-text" placeholder="Notes..."></textarea>
+            <button id="save-notes" class="mt-2 action-btn w-full">Save Notes</button>
         </div>
     </div>
     <script src="popup.js"></script>
