@@ -2,8 +2,9 @@
 body.horizontal-popup {
     display: flex;
     flex-direction: column;
-    width: 800px; /* Adjust as necessary */
+    width: 800px;
     height: auto;
+    background-color: white;
 }
 
 .filter-bar {
@@ -27,7 +28,7 @@ body.horizontal-popup {
 
 .filter-btn,
 .action-btn {
-    background-color: #25d366;
+    background-color: black;
     color: white;
     padding: 5px 10px;
     border: none;
@@ -37,7 +38,7 @@ body.horizontal-popup {
 
 .filter-btn:hover,
 .action-btn:hover {
-    background-color: #128c7e;
+    background-color: #333333;
 }
 
 .input-text {
@@ -49,7 +50,7 @@ body.horizontal-popup {
 
 .input-text:focus {
     outline: none;
-    border-color: #25d366;
+    border-color: black;
 }
 
 .font-semibold {
