@@ -6,35 +6,21 @@
     <title>WhatsApp Filters</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="p-4">
-    <div class="container mx-auto max-w-sm">
-        <h1 class="text-2xl font-bold text-center mb-4">WhatsApp Filters</h1>
-
-        <div class="filters mb-4 flex flex-wrap justify-center">
-            <button id="filter-all" class="filter-btn">All</button>
-            <button id="filter-unread" class="filter-btn">Unread</button>
-            <button id="filter-awaiting" class="filter-btn">Awaiting Reply</button>
-            <button id="filter-needs-reply" class="filter-btn">Needs Reply</button>
-        </div>
-
-        <div class="custom-filters mb-4">
-            <h2 class="text-xl font-semibold mb-2">Custom Filters</h2>
-            <div id="custom-filters-list" class="flex flex-wrap gap-2 mb-2">
-                <!-- Custom filters will be listed here -->
-            </div>
-            <div class="flex gap-2">
-                <input type="text" id="new-filter-name" class="w-full input-text" placeholder="Filter name">
-                <button id="add-filter" class="action-btn">Add</button>
-            </div>
-        </div>
-
-        <div class="contact-details">
-            <h2 class="text-xl font-semibold mb-2">Contact Details</h2>
-            <p id="contact-name">Name: <span class="font-semibold"></span></p>
-            <p id="contact-number">Number: <span class="font-semibold"></span></p>
-            <textarea id="contact-notes" class="w-full input-text" placeholder="Notes..."></textarea>
-            <button id="save-notes" class="mt-2 action-btn w-full">Save Notes</button>
-        </div>
+<body class="horizontal-popup">
+    <div class="filter-bar">
+        <button id="filter-all" class="filter-btn">All</button>
+        <button id="filter-unread" class="filter-btn">Unread</button>
+        <button id="filter-awaiting" class="filter-btn">Awaiting Reply</button>
+        <button id="filter-needs-reply" class="filter-btn">Needs Reply</button>
+        <input type="text" id="new-filter-name" class="input-text" placeholder="Filter name">
+        <button id="add-filter" class="action-btn">Add</button>
+    </div>
+    <div id="custom-filters-list" class="custom-filters-list"></div>
+    <div class="contact-details">
+        <p id="contact-name">Name: <span class="font-semibold"></span></p>
+        <p id="contact-number">Number: <span class="font-semibold"></span></p>
+        <textarea id="contact-notes" class="input-text" placeholder="Notes..."></textarea>
+        <button id="save-notes" class="action-btn">Save Notes</button>
     </div>
     <script src="popup.js"></script>
 </body>
